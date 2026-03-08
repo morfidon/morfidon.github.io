@@ -1,15 +1,19 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Load navigation
-    fetch('/components/nav.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('nav-placeholder').innerHTML = data;
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('components/nav.html')
+        .then((response) => response.text())
+        .then((data) => {
+            const navPlaceholder = document.getElementById('nav-placeholder');
+            if (navPlaceholder) {
+                navPlaceholder.innerHTML = data;
+            }
         });
 
-    // Load footer
-    fetch('/components/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
+    fetch('components/footer.html')
+        .then((response) => response.text())
+        .then((data) => {
+            const footerPlaceholder = document.getElementById('footer-placeholder');
+            if (footerPlaceholder) {
+                footerPlaceholder.innerHTML = data;
+            }
         });
 });
