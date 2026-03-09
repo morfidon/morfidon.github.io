@@ -365,6 +365,18 @@ blockquote {
     color: #e8efff;
 }
 
+.story-quote {
+    margin-bottom: 1.2rem;
+    border-left: 3px solid var(--accent);
+}
+
+.philosophy-card {
+    margin: 0;
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #e6f0ff;
+}
+
 blockquote::before {
     content: "“";
     font-size: 1.8rem;
