@@ -30,16 +30,11 @@ function initActiveNav() {
         link.classList.toggle('is-active', page === currentPath || (currentPath === '' && page === 'index.html'));
     });
 
-    const sectionsWrap = document.querySelector('.nav-sections-wrap');
-    if (sectionsWrap) {
-        sectionsWrap.classList.toggle('is-visible', currentPath === 'index.html' || currentPath === '');
-    }
-
     if (!(currentPath === 'index.html' || currentPath === '')) {
         return;
     }
 
-    const sectionIds = ['hero', 'achievements', 'experience', 'builder-playbook', 'skills', 'projects', 'testimonials', 'contact-cta'];
+    const sectionIds = ['hero', 'personal-line', 'metrics', 'achievements', 'experience', 'origin-story', 'builder-playbook', 'skills', 'projects', 'testimonials', 'now', 'contact-cta'];
     const sections = sectionIds
         .map((id) => document.getElementById(id))
         .filter(Boolean);
@@ -48,7 +43,7 @@ function initActiveNav() {
         return;
     }
 
-    const navLinks = document.querySelectorAll('.site-nav a[data-section]');
+    const navLinks = document.querySelectorAll('.section-links a[href^="#"]');
     if (!navLinks.length) {
         return;
     }
@@ -64,7 +59,7 @@ function initActiveNav() {
         });
 
         navLinks.forEach((link) => {
-            const section = link.getAttribute('data-section');
+            const section = link.getAttribute('href').replace('#', '');
             link.classList.toggle('is-active', section === activeId);
         });
     };
