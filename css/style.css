@@ -225,6 +225,8 @@ h3 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 0.45rem;
+    line-height: 1.1;
     padding: 0.72rem 1.1rem;
     border-radius: 999px;
     font-weight: 700;
@@ -236,9 +238,26 @@ h3 {
     color: #09111f;
 }
 
+.cta-button:hover,
+.cta-button:focus-visible {
+    color: #09111f;
+}
+
 .ghost-button {
     border-color: var(--border);
     color: var(--text-main);
+}
+
+.ghost-button:hover,
+.ghost-button:focus-visible {
+    color: var(--text-main);
+}
+
+.cta-button .icon,
+.ghost-button .icon {
+    width: 0.95em;
+    height: 0.95em;
+    transform: translateY(0.02em);
 }
 
 .metrics-grid {
