@@ -534,19 +534,26 @@ h3 {
 
 .course-link {
     display: inline-flex;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
+    align-items: center;
+    gap: 0.35rem;
+    align-self: flex-start;
+    margin: 0 1rem 1rem;
     font-weight: 700;
-    padding: 0.82rem;
-    background: rgba(140, 168, 255, 0.18);
+    font-size: 0.92rem;
+    padding: 0.5rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(140, 168, 255, 0.42);
+    background: rgba(140, 168, 255, 0.1);
     color: var(--text-main);
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .course-link:hover,
 .course-link:focus-visible {
-    background: rgba(100, 244, 209, 0.2);
+    border-color: rgba(100, 244, 209, 0.58);
+    background: rgba(100, 244, 209, 0.16);
     color: #f8fcff;
+    transform: translateX(2px);
 }
 
 .testimonials-grid {
