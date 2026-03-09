@@ -201,16 +201,14 @@ h3 {
 
 .hero-trust {
     position: relative;
-    border: 1px solid rgba(139, 166, 255, 0.5);
-    background:
-        radial-gradient(circle at 12% 12%, rgba(100, 244, 209, 0.24), transparent 38%),
-        linear-gradient(140deg, rgba(9, 17, 31, 0.9), rgba(20, 32, 55, 0.86));
+    border: 1px solid rgba(123, 164, 255, 0.38);
+    background: linear-gradient(155deg, rgba(15, 27, 49, 0.95) 0%, rgba(11, 22, 42, 0.96) 58%, rgba(8, 18, 35, 0.98) 100%);
     border-radius: 18px;
     padding: 1rem 1rem 0.9rem;
     box-shadow:
-        0 0 0 1px rgba(100, 244, 209, 0.22),
-        0 14px 36px rgba(8, 14, 30, 0.5),
-        0 0 24px rgba(139, 166, 255, 0.26);
+        inset 0 1px 0 rgba(180, 209, 255, 0.12),
+        0 14px 36px rgba(8, 14, 30, 0.45),
+        0 0 0 1px rgba(123, 164, 255, 0.12);
     overflow: hidden;
 }
 
@@ -219,8 +217,7 @@ h3 {
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: linear-gradient(120deg, rgba(255, 255, 255, 0.14), transparent 42%);
-    mix-blend-mode: screen;
+    background: radial-gradient(circle at 100% 0%, rgba(100, 244, 209, 0.12), transparent 52%);
 }
 
 .hero-trust-value {
