@@ -92,6 +92,38 @@ header {
     border-bottom-color: var(--accent);
 }
 
+
+.nav-pages {
+    flex: 0;
+    justify-content: flex-start;
+}
+
+.nav-sections-wrap {
+    display: none;
+    align-items: center;
+    gap: 0.6rem;
+    padding-left: 0.8rem;
+    margin-left: 0.2rem;
+    border-left: 1px solid var(--border);
+}
+
+.nav-sections-wrap.is-visible {
+    display: flex;
+}
+
+.nav-sections-label {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+}
+
+.nav-sections {
+    flex: 0;
+    justify-content: flex-start;
+}
+
 .nav-cta {
     background: linear-gradient(120deg, var(--accent), var(--accent-2));
     color: #09111f;
@@ -363,6 +395,18 @@ blockquote {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border);
     color: #e8efff;
+}
+
+.story-quote {
+    margin-bottom: 1.2rem;
+    border-left: 3px solid var(--accent);
+}
+
+.philosophy-card {
+    margin: 0;
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #e6f0ff;
 }
 
 blockquote::before {
