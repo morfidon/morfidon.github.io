@@ -734,6 +734,28 @@ footer {
     margin-bottom: 0.7rem;
 }
 
+
+.skills-groups-rich {
+    gap: 1rem;
+}
+
+.badge-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.skill-badge {
+    display: inline-flex;
+    line-height: 0;
+}
+
+.skill-badge img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 .avatar-badge {
     display: inline-flex;
     justify-content: center;
