@@ -22,7 +22,7 @@ function initCourseCards() {
 }
 
 function initActiveNav() {
-    const sectionIds = ['hero', 'experience', 'skills', 'projects', 'testimonials', 'contact-cta'];
+    const sectionIds = ['hero', 'achievements', 'experience', 'builder-playbook', 'skills', 'projects', 'testimonials', 'contact-cta'];
     const sections = sectionIds
         .map((id) => document.getElementById(id))
         .filter(Boolean);
