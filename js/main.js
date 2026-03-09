@@ -22,6 +22,23 @@ function initCourseCards() {
 }
 
 function initActiveNav() {
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+
+    const pageLinks = document.querySelectorAll('.site-nav a[data-page]');
+    pageLinks.forEach((link) => {
+        const page = link.getAttribute('data-page');
+        link.classList.toggle('is-active', page === currentPath || (currentPath === '' && page === 'index.html'));
+    });
+
+    const sectionsWrap = document.querySelector('.nav-sections-wrap');
+    if (sectionsWrap) {
+        sectionsWrap.classList.toggle('is-visible', currentPath === 'index.html' || currentPath === '');
+    }
+
+    if (!(currentPath === 'index.html' || currentPath === '')) {
+        return;
+    }
+
     const sectionIds = ['hero', 'achievements', 'experience', 'builder-playbook', 'skills', 'projects', 'testimonials', 'contact-cta'];
     const sections = sectionIds
         .map((id) => document.getElementById(id))
@@ -31,7 +48,7 @@ function initActiveNav() {
         return;
     }
 
-    const navLinks = document.querySelectorAll('.site-nav a[href^="index.html#"], .site-nav a[href^="#"]');
+    const navLinks = document.querySelectorAll('.site-nav a[data-section]');
     if (!navLinks.length) {
         return;
     }
@@ -47,9 +64,8 @@ function initActiveNav() {
         });
 
         navLinks.forEach((link) => {
-            const href = link.getAttribute('href') || '';
-            const hash = href.includes('#') ? href.slice(href.indexOf('#')) : '';
-            link.classList.toggle('is-active', hash === `#${activeId}`);
+            const section = link.getAttribute('data-section');
+            link.classList.toggle('is-active', section === activeId);
         });
     };
 
