@@ -106,6 +106,32 @@ header {
     font-weight: 700;
 }
 
+
+.icon {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+}
+
+.brand,
+.site-nav ul a,
+.nav-cta,
+.section-links a,
+.course-link,
+.social-links a,
+#contact-info li a,
+.inline-icon-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.42rem;
+}
+
+.inline-icon-label {
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-right: 0.15rem;
+}
+
 main {
     max-width: 1150px;
     margin: 0 auto;
@@ -379,7 +405,9 @@ h3 {
 }
 
 .course-link {
-    display: block;
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
     text-align: center;
     font-weight: 700;
     padding: 0.82rem;
@@ -476,7 +504,7 @@ cite {
 }
 
 #contact-info li a {
-    display: inline-block;
+    display: inline-flex;
     padding: 0.45rem 0.75rem;
     border-radius: 999px;
     border: 1px solid var(--border);
@@ -499,6 +527,14 @@ footer {
 
 .social-links a {
     color: var(--text-main);
+    padding: 0.3rem 0.55rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+}
+
+.social-links a:hover {
+    border-color: var(--border);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .more-courses-note {
